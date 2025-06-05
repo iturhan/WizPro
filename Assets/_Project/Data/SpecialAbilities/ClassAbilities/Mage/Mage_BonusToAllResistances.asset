@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff847e2dd59f5f148870bc0d1831d3a5, type: 3}
+  m_Name: Mage_BonusToAllResistances
+  m_EditorClassIdentifier: 
+  uniqueID: 0
+  abilityName: '%5 Bonus To All Resistances'
+  description: '%5 Bonus To All Resistances'
+  icon: {fileID: 0}
+  parameterType: 2
+  skillToBonus: {fileID: 0}
+  skillBonusAmount: 0
+  realmToBonus: 0
+  bonusToAllRealms: 1
+  resistanceBonusValue: 5
+  regeneratesHP: 0
+  regeneratesStamina: 0
+  regenerationRatePerTurnOrSecond: 1

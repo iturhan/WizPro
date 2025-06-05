@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ae863d01ec1336478d134217f688504, type: 3}
+  m_Name: Itching Skin
+  m_EditorClassIdentifier: 
+  spellName: Itching Skin
+  description: 'An annoying irritant coats enemies in front of the caster,
+
+    lessening
+    their ability to attack and defend.'
+  icon: {fileID: 0}
+  spellBookLevel: 1
+  availableInSpellbooks: 04000000
+  magicRealm: 9
+  targetingType: 8
+  baseSpellPointCost: 2
+  maxPowerLevel: 7
+  spellPointCostByPowerLevel: 
+  effectPotencyFormulaText: N/A
+  durationFormulaText: Instant
+  canCastInCombat: 1
+  canCastOutOfCombat: 0
