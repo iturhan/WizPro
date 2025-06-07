@@ -10,21 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3fe0b97584aa1204bb3ac84e5ea9d342, type: 3}
-  m_Name: Bishop
+  m_Name: Priest
   m_EditorClassIdentifier: 
-  className: Bishop
+  className: Mage
   description: 
   statRequirements:
   - stat: 1
-    minValue: 15
-  - stat: 2
-    minValue: 15
-  - stat: 6
-    minValue: 8
+    minValue: 12
   hpPerLevelBonus: 3
   stmPerLevelBonus: 3
   skillPointsToAllocatePerLevel: 5
-  learnableSpellSchools: 020000000100000003000000
+  learnableSpellSchools: 02000000
   allowedSkills:
   - {fileID: 11400000, guid: af75c4d4cccc3ef47ad68b0b511cdd85, type: 2}
   - {fileID: 11400000, guid: 38b1ea2c4a7a1194f9905cccf9010b9b, type: 2}
@@ -39,4 +35,3 @@ MonoBehaviour:
   - skill: {fileID: 11400000, guid: 38b1ea2c4a7a1194f9905cccf9010b9b, type: 2}
     points: 10
   allowedEquipmentTypes: []
-  classAbilities: []
