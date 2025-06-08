@@ -564,6 +564,7 @@ public class CharacterData {
         UpdateStatusEffectDurations(); // Durum efektlerini de güncelle
     }
 
+
 }
 
 // Karakter üzerindeki aktif bir durumu/hastalýðý temsil eden yardýmcý sýnýf

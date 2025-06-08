@@ -1,53 +1,68 @@
-// _Project/Scripts/Managers/CharacterCreationManager.cs
+// CharacterCreationManager.cs dosyasýnýn güncellenmiþ hali
+
 using System.Collections.Generic;
 using UnityEngine;
 
 public class CharacterCreationManager : MonoBehaviour {
-    // Bu, tüm adýmlar boyunca oluþturulan karakter verisini tutar.
     private CharacterData characterInProgress;
     private List<SpellSO> selectedSpells = new List<SpellSO>();
 
+    // Bu, profesyon adýmýnýn en az bir kez tamamlanýp tamamlanmadýðýný tutar.
+    public bool hasProfessionBeenSet { get; private set; } = false;
+
     [Header("UI Panels")]
-    public GameObject professionPanel; // Adým 1
-    public GameObject spellsPanel;     // Adým 2
-    public GameObject skillsPanel;     // Adým 3
-    public GameObject finalizationPanel; // Adým 4
+    public GameObject professionPanel;
+    public GameObject spellsPanel;
+    public GameObject skillsPanel;
+    public GameObject finalizationPanel;
 
     void Start() {
-        // Baþlangýçta sadece ilk paneli aktif et
         ShowPanel(professionPanel);
-        // Yeni bir karakter oluþturma süreci baþlat
         characterInProgress = new CharacterData();
-
     }
 
     public CharacterData GetCurrentCharacterData() {
         return characterInProgress;
     }
 
-    // Profesyonel ekranýndan çaðrýlacak
     public void UpdateCharacterProfession(RaceSO race, Sex sex, ClassSO cClass) {
-        // Seçimler deðiþtiðinde yeni bir karakter verisi oluþturuyoruz.
-        // Ýsim ve portre daha sonra eklenecek.
         characterInProgress = new CharacterData("Unnamed", sex, race, cClass);
     }
 
-    // Yükleme/Ýlerleme Mantýðý
-    public void GoToSpellsStep() {
-        ShowPanel(spellsPanel);
-    }
-
-    // Diðer adýmlara geçiþ metotlarý (GoToSkillsStep, GoToFinalizeStep) buraya eklenecek.
-
-    private void ShowPanel(GameObject panelToShow) {
-        professionPanel.SetActive(panelToShow == professionPanel);
-        spellsPanel.SetActive(panelToShow == spellsPanel);
-        skillsPanel.SetActive(panelToShow == skillsPanel);
-        finalizationPanel.SetActive(panelToShow == finalizationPanel);
-    }
     public void SetCharacterSpells(List<SpellSO> spells) {
         selectedSpells = new List<SpellSO>(spells);
         Debug.Log($"Character now has {selectedSpells.Count} spells.");
     }
 
+    // --- YENÝ EKLENEN VEYA GÜNCELLENEN METOTLAR ---
+
+    // Adým 1'e (Profesyon) git
+    public void GoToProfessionStep() {
+        ShowPanel(professionPanel);
+    }
+
+    // Adým 2'ye (Büyüler) git
+    public void GoToSpellsStep() {
+        hasProfessionBeenSet = true;
+        ShowPanel(spellsPanel);
+    }
+
+    // Adým 3'e (Yetenekler) git
+    public void GoToSkillsStep() {
+        ShowPanel(skillsPanel);
+    }
+
+    // Adým 4'e (Sonuç) git
+    public void GoToFinalizationStep() {
+        ShowPanel(finalizationPanel);
+    }
+
+    // Bu metot zaten harika, olduðu gibi kalýyor
+    private void ShowPanel(GameObject panelToShow) {
+        professionPanel.SetActive(panelToShow == professionPanel);
+        spellsPanel.SetActive(panelToShow == spellsPanel);
+        // Henüz eklemediyseniz bu satýrlarý ekleyin
+        skillsPanel.SetActive(panelToShow == skillsPanel);
+        finalizationPanel.SetActive(panelToShow == finalizationPanel);
+    }
 }

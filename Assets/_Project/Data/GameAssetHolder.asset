@@ -20,3 +20,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 920f5c80cef8ad14f9447cbe01601a70, type: 2}
   - {fileID: 11400000, guid: a7c4f7f656b9f474787c772089262fd2, type: 2}
   - {fileID: 11400000, guid: 435fcc16805078b4fa2048b915acc92c, type: 2}
+  allSpells:
+  - {fileID: 11400000, guid: 977268036d10b2a44b1760b48b335a23, type: 2}
+  - {fileID: 11400000, guid: 36deb3c356f30cc439967f59c9eeb948, type: 2}
+  - {fileID: 11400000, guid: f13a17eb8e1f1f348a93ba9a270f3ca9, type: 2}
+  - {fileID: 11400000, guid: a9b8a2cff3a380e4db9faa25b44800d2, type: 2}
+  - {fileID: 11400000, guid: e80b9403803508b4ca33dcb49a876d92, type: 2}

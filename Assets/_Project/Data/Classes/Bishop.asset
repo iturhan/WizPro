@@ -24,7 +24,7 @@ MonoBehaviour:
   hpPerLevelBonus: 3
   stmPerLevelBonus: 3
   skillPointsToAllocatePerLevel: 5
-  learnableSpellSchools: 020000000100000003000000
+  learnableSpellSchools: 02000000010000000300000004000000
   allowedSkills:
   - {fileID: 11400000, guid: af75c4d4cccc3ef47ad68b0b511cdd85, type: 2}
   - {fileID: 11400000, guid: 38b1ea2c4a7a1194f9905cccf9010b9b, type: 2}

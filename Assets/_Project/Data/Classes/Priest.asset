@@ -12,11 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fe0b97584aa1204bb3ac84e5ea9d342, type: 3}
   m_Name: Priest
   m_EditorClassIdentifier: 
-  className: Mage
-  description: 
+  className: Priest
+  description: Priest
   statRequirements:
-  - stat: 1
+  - stat: 2
     minValue: 12
+  - stat: 6
+    minValue: 8
   hpPerLevelBonus: 3
   stmPerLevelBonus: 3
   skillPointsToAllocatePerLevel: 5
@@ -35,3 +37,4 @@ MonoBehaviour:
   - skill: {fileID: 11400000, guid: 38b1ea2c4a7a1194f9905cccf9010b9b, type: 2}
     points: 10
   allowedEquipmentTypes: []
+  classAbilities: []
