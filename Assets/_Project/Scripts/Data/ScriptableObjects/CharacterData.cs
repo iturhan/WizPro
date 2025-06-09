@@ -49,6 +49,8 @@ public class CharacterData {
     public Dictionary<MagicRealm, int> currentSpellPoints = new Dictionary<MagicRealm, int>();
     public Dictionary<MagicRealm, int> maxSpellPoints = new Dictionary<MagicRealm, int>();
 
+    public Dictionary<SkillSO, int> skills = new Dictionary<SkillSO, int>();
+
     #endregion
 
     #region Constructors
@@ -75,6 +77,7 @@ public class CharacterData {
         InvalidateSpecialAbilitiesCache(); // Cache'i sýfýrla ki GetCompiled ilk çaðrýda yeniden oluþtursun
 
         InitializeBaseStats();
+        InitializeSkills();
         InitializeStartingSkills();
         // ... (diðer baþlatmalar) ...
         ApplyInitialSpecialAbilityEffects(); // Özel yeteneklerin baþlangýç etkilerini uygula
@@ -113,6 +116,11 @@ public class CharacterData {
             baseStats[StatType.Senses] += 1;
         }
         EnforceMaxStatRule();
+    }
+
+    private void InitializeSkills() {
+        skills.Clear();
+        // Doldurma iþini Controller yapacak.
     }
 
     private void InitializeStartingSkills() {
@@ -564,6 +572,10 @@ public class CharacterData {
         UpdateStatusEffectDurations(); // Durum efektlerini de güncelle
     }
 
+    public void RecalculateBaseStats() {
+        // Zaten var olan ve doðru çalýþan özel (private) metodunuzu çaðýrýr.
+        InitializeBaseStats();
+    }
 
 }
 

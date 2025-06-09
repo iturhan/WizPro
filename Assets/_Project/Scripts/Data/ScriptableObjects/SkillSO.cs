@@ -17,7 +17,7 @@ public class SkillSO : ScriptableObject {
     public string skillName;
     [TextArea(5, 10)]
     public string description;
-    public SkillCategory category; // Weaponry, Physical, Academia, Expert, Magic
+    public SkillCategory category; // Weaponry, Physical, Academia, Expert
     public Sprite icon;
 
     [Header("Progression")]

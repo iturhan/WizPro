@@ -12,4 +12,7 @@ public class GameAssetHolderSO : ScriptableObject {
     [Header("Spell Data")]
     public List<SpellSO> allSpells;
 
+    [Header("Skill Data")]
+    public List<SkillSO> allSkills;
+
 }
